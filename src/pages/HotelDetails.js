@@ -70,30 +70,14 @@ function HotelDetails({ hotels, onToggleFavorite, favorites }) {
           </ul>
 
           <h3>Location And Contact</h3>
-          <div className="hotel-info-grid">
-            <div className="hotel-info-card">
-              <p>
-                <strong>Address:</strong> {hotel.address}
-              </p>
-              <p>
-                <strong>Phone:</strong>{" "}
-                <a href={`tel:${hotel.phone.replace(/\s+/g, "")}`}>{hotel.phone}</a>
-              </p>
-              <p>
-                <a href={hotel.mapLink} target="_blank" rel="noreferrer">
-                  Open Map In New Tab
-                </a>
-              </p>
-            </div>
-            <div className="map-card">
-              <iframe
-                src={hotel.mapEmbedUrl}
-                title={`${hotel.name} map`}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+          <div className="hotel-info-card">
+            <p>
+              <strong>Address:</strong> {hotel.address}
+            </p>
+            <p>
+              <strong>Phone:</strong>{" "}
+              <a href={`tel:${hotel.phone.replace(/\s+/g, "")}`}>{hotel.phone}</a>
+            </p>
           </div>
         </article>
 
